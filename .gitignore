@@ -1,0 +1,55 @@
+# ==============================================================================
+# .gitignore - Proyecto Investigación Cundinamarca (Saber 11 & Clima)
+# ==============================================================================
+
+# 1. BASES DE DATOS PESADAS Y MICRODATOS CRUDOS (ICFES & DANE)
+BASEICFES/
+Bases_Procesadas/dane_educ_historico/
+*.zip
+*.rar
+*.7z
+*.gz
+*.tar
+
+# 2. ARCHIVOS DE DATOS PROCESADOS O GENERADOS PESADOS
+Bases_Procesadas/*.csv
+*.csv
+*.CSV
+*.dat
+*.sav
+*.dta
+*.parquet
+
+# Excepciones para gráficos y resultados clave de investigación
+!Bases_Procesadas/coeficientes_modelo.png
+
+# 3. ENTORNOS Y ARCHIVOS DE CONFIGURACIÓN DE R
+.Rhistory
+.RData
+.RDataTmp
+.Ruserdata
+.Renviron
+.Rproj.user/
+
+# 4. CACHÉ Y ENTORNOS DE PYTHON
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+ENV/
+.pytest_cache/
+
+# 5. ARCHIVOS TEMPORALES DE SISTEMA OPERATIVO Y EDITORES (VS CODE, IDEs)
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# 6. LOGS Y ARCHIVOS TEMPORALES
+*.log

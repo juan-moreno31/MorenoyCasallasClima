@@ -36,7 +36,8 @@ df_panel <- df_panel %>%
     anio_num      = anio,
     anio          = as.factor(anio),
     mcpio_norm    = as.factor(mcpio_norm),
-    cole_naturaleza = as.factor(cole_naturaleza)
+    cole_naturaleza = as.factor(cole_naturaleza),
+    infra_sin_energia = 1 - infra_energia_red # 1 para colegios sin red eléctrica
   )
 
 # ==============================================================================
@@ -77,18 +78,18 @@ m2_twfe <- feols(
   cluster = ~mcpio_norm
 )
 
-# Modelo 3: ESPECIFICACIÓN PRINCIPAL — TWFE + Mecanismos de Infraestructura
+# Modelo 3: ESPECIFICACIÓN PRINCIPAL — TWFE + Interacción (Ref: Colegios Con Red Eléctrica)
 m3_principal <- feols(
   prom_punt_global ~ temp_efectiva + precip_efectiva + 
                      pct_estrato_bajo + pct_internet + ind_hacinamiento_prom +
-                     temp_efectiva:infra_energia_red | 
+                     temp_efectiva:infra_sin_energia | 
                      cole_cod_dane_establecimiento + anio,
   data = df_panel,
   cluster = ~mcpio_norm
 )
 
 etable(m1_ols, m2_twfe, m3_principal,
-       headers = c("OLS", "TWFE", "Principal (Infra.)"))
+       headers = c("OLS", "TWFE", "Principal (Ref: Con Luz)"))
 
 
 # ==============================================================================
@@ -198,7 +199,7 @@ coef_labels <- c(
   "pct_estrato_bajo"                    = "% Estrato Vivienda Bajo",
   "pct_internet"                        = "% Conexión Internet",
   "ind_hacinamiento_prom"               = "Índice de Hacinamiento Hogar",
-  "temp_efectiva:infra_energia_red"     = "Temp. × Red Energía Eléctrica",
+  "temp_efectiva:infra_sin_energia"     = "Temp. × Sin Red Energía",
   "temp_lead1"                          = "Placebo: Temp. Efectiva (t+1)"
 )
 

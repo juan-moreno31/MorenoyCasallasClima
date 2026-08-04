@@ -79,12 +79,11 @@ m2_twfe <- feols(
 
 # Modelo 3: ESPECIFICACIÓN PRINCIPAL — TWFE + Mecanismos de Infraestructura
 m3_principal <- feols(
-  prom_punt_global ~ temp_efectiva + precip_efectiva +
+  prom_punt_global ~ temp_efectiva + precip_efectiva + 
                      pct_estrato_bajo + pct_internet + ind_hacinamiento_prom +
-                     temp_efectiva:infra_energia_red +
-                     temp_efectiva:infra_pae |
+                     temp_efectiva:infra_energia_red | 
                      cole_cod_dane_establecimiento + anio,
-  data    = df_panel,
+  data = df_panel,
   cluster = ~mcpio_norm
 )
 
@@ -200,7 +199,6 @@ coef_labels <- c(
   "pct_internet"                        = "% Conexión Internet",
   "ind_hacinamiento_prom"               = "Índice de Hacinamiento Hogar",
   "temp_efectiva:infra_energia_red"     = "Temp. × Red Energía Eléctrica",
-  "temp_efectiva:infra_pae"             = "Temp. × Programa PAE",
   "temp_lead1"                          = "Placebo: Temp. Efectiva (t+1)"
 )
 

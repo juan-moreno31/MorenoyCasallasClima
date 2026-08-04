@@ -1,248 +1,241 @@
-<!-- preamble start -->
-<!DOCTYPE html> 
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>tinytable_r7c77gvc48ycvqoxl7uf</title>
-    
-  </head>
-  <body>
-<!-- preamble end -->
 
-    <script src="https://cdn.jsdelivr.net/gh/vincentarelbundock/tinytable@main/inst/tinytable.js"></script>
+<style>
+  table {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  th {
+    background-color: #2c3e50;
+    color: white;
+    font-weight: bold;
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+  td {
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  tr:nth-child(even) {
+    background-color: #f8f9fa;
+  }
+  tr:hover {
+    background-color: #f1f3f5;
+  }
+  caption {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #2c3e50;
+    text-align: left;
+  }
+</style>
 
-    <script>
-      // Create table-specific functions using external factory
-      const tableFns_r7c77gvc48ycvqoxl7uf = TinyTable.createTableFunctions("tinytable_r7c77gvc48ycvqoxl7uf");
-      // tinytable span after
-      window.addEventListener('load', function () {
-          var cellsToStyle = [
-            // tinytable style arrays after
-          { positions: [ { i: '17', j: 2 }, { i: '17', j: 3 }, { i: '17', j: 4 }, { i: '17', j: 5 }, { i: '17', j: 6 }, { i: '17', j: 7 }, { i: '17', j: 8 } ], css_id: 'tinytable_css_xg7scax47t6qxgnfgc79',}, 
-          { positions: [ { i: '14', j: 2 }, { i: '14', j: 3 }, { i: '14', j: 4 }, { i: '14', j: 5 }, { i: '14', j: 6 }, { i: '14', j: 7 }, { i: '14', j: 8 } ], css_id: 'tinytable_css_wx8i4mspo5my45kaqcwr',}, 
-          { positions: [ { i: '1', j: 2 }, { i: '2', j: 2 }, { i: '3', j: 2 }, { i: '4', j: 2 }, { i: '5', j: 2 }, { i: '6', j: 2 }, { i: '7', j: 2 }, { i: '8', j: 2 }, { i: '9', j: 2 }, { i: '10', j: 2 }, { i: '11', j: 2 }, { i: '12', j: 2 }, { i: '13', j: 2 }, { i: '15', j: 2 }, { i: '16', j: 2 }, { i: '1', j: 3 }, { i: '2', j: 3 }, { i: '3', j: 3 }, { i: '4', j: 3 }, { i: '5', j: 3 }, { i: '6', j: 3 }, { i: '7', j: 3 }, { i: '8', j: 3 }, { i: '9', j: 3 }, { i: '10', j: 3 }, { i: '11', j: 3 }, { i: '12', j: 3 }, { i: '13', j: 3 }, { i: '15', j: 3 }, { i: '16', j: 3 }, { i: '1', j: 4 }, { i: '2', j: 4 }, { i: '3', j: 4 }, { i: '4', j: 4 }, { i: '5', j: 4 }, { i: '6', j: 4 }, { i: '7', j: 4 }, { i: '8', j: 4 }, { i: '9', j: 4 }, { i: '10', j: 4 }, { i: '11', j: 4 }, { i: '12', j: 4 }, { i: '13', j: 4 }, { i: '15', j: 4 }, { i: '16', j: 4 }, { i: '1', j: 5 }, { i: '2', j: 5 }, { i: '3', j: 5 }, { i: '4', j: 5 }, { i: '5', j: 5 }, { i: '6', j: 5 }, { i: '7', j: 5 }, { i: '8', j: 5 }, { i: '9', j: 5 }, { i: '10', j: 5 }, { i: '11', j: 5 }, { i: '12', j: 5 }, { i: '13', j: 5 }, { i: '15', j: 5 }, { i: '16', j: 5 }, { i: '1', j: 6 }, { i: '2', j: 6 }, { i: '3', j: 6 }, { i: '4', j: 6 }, { i: '5', j: 6 }, { i: '6', j: 6 }, { i: '7', j: 6 }, { i: '8', j: 6 }, { i: '9', j: 6 }, { i: '10', j: 6 }, { i: '11', j: 6 }, { i: '12', j: 6 }, { i: '13', j: 6 }, { i: '15', j: 6 }, { i: '16', j: 6 }, { i: '1', j: 7 }, { i: '2', j: 7 }, { i: '3', j: 7 }, { i: '4', j: 7 }, { i: '5', j: 7 }, { i: '6', j: 7 }, { i: '7', j: 7 }, { i: '8', j: 7 }, { i: '9', j: 7 }, { i: '10', j: 7 }, { i: '11', j: 7 }, { i: '12', j: 7 }, { i: '13', j: 7 }, { i: '15', j: 7 }, { i: '16', j: 7 }, { i: '1', j: 8 }, { i: '2', j: 8 }, { i: '3', j: 8 }, { i: '4', j: 8 }, { i: '5', j: 8 }, { i: '6', j: 8 }, { i: '7', j: 8 }, { i: '8', j: 8 }, { i: '9', j: 8 }, { i: '10', j: 8 }, { i: '11', j: 8 }, { i: '12', j: 8 }, { i: '13', j: 8 }, { i: '15', j: 8 }, { i: '16', j: 8 } ], css_id: 'tinytable_css_kaawnwidfzglbwsnirfw',}, 
-          { positions: [ { i: '0', j: 2 }, { i: '0', j: 3 }, { i: '0', j: 4 }, { i: '0', j: 5 }, { i: '0', j: 6 }, { i: '0', j: 7 }, { i: '0', j: 8 } ], css_id: 'tinytable_css_klreldnnb07h9livozj9',}, 
-          { positions: [ { i: '17', j: 1 } ], css_id: 'tinytable_css_po3x19xyuviwxdba75hd',}, 
-          { positions: [ { i: '14', j: 1 } ], css_id: 'tinytable_css_90oa7csn9ld7ydhi2kx3',}, 
-          { positions: [ { i: '1', j: 1 }, { i: '2', j: 1 }, { i: '3', j: 1 }, { i: '4', j: 1 }, { i: '5', j: 1 }, { i: '6', j: 1 }, { i: '7', j: 1 }, { i: '8', j: 1 }, { i: '9', j: 1 }, { i: '10', j: 1 }, { i: '11', j: 1 }, { i: '12', j: 1 }, { i: '13', j: 1 }, { i: '15', j: 1 }, { i: '16', j: 1 } ], css_id: 'tinytable_css_ge59esh55uciiqzsbk4d',}, 
-          { positions: [ { i: '0', j: 1 } ], css_id: 'tinytable_css_sdzwhgrmkabpk896t56v',}, 
-          ];
-
-          // Loop over the arrays to style the cells
-          cellsToStyle.forEach(function (group) {
-              group.positions.forEach(function (cell) {
-                  tableFns_r7c77gvc48ycvqoxl7uf.styleCell(cell.i, cell.j, group.css_id);
-              });
-          });
-      });
-    </script>
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/vincentarelbundock/tinytable@main/inst/tinytable.css">
-    <style>
-    /* tinytable css entries after */
-    #tinytable_r7c77gvc48ycvqoxl7uf td.tinytable_css_xg7scax47t6qxgnfgc79, #tinytable_r7c77gvc48ycvqoxl7uf th.tinytable_css_xg7scax47t6qxgnfgc79 {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: var(--tt-line-color); --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.08em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
-    #tinytable_r7c77gvc48ycvqoxl7uf td.tinytable_css_wx8i4mspo5my45kaqcwr, #tinytable_r7c77gvc48ycvqoxl7uf th.tinytable_css_wx8i4mspo5my45kaqcwr {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: var(--tt-line-color); --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.05em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
-    #tinytable_r7c77gvc48ycvqoxl7uf td.tinytable_css_kaawnwidfzglbwsnirfw, #tinytable_r7c77gvc48ycvqoxl7uf th.tinytable_css_kaawnwidfzglbwsnirfw { text-align: center }
-    #tinytable_r7c77gvc48ycvqoxl7uf td.tinytable_css_klreldnnb07h9livozj9, #tinytable_r7c77gvc48ycvqoxl7uf th.tinytable_css_klreldnnb07h9livozj9 {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 1; --line-color-bottom: var(--tt-line-color); --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.05em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.08em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: center }
-    #tinytable_r7c77gvc48ycvqoxl7uf td.tinytable_css_po3x19xyuviwxdba75hd, #tinytable_r7c77gvc48ycvqoxl7uf th.tinytable_css_po3x19xyuviwxdba75hd {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: var(--tt-line-color); --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.08em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: left }
-    #tinytable_r7c77gvc48ycvqoxl7uf td.tinytable_css_90oa7csn9ld7ydhi2kx3, #tinytable_r7c77gvc48ycvqoxl7uf th.tinytable_css_90oa7csn9ld7ydhi2kx3 {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: var(--tt-line-color); --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.05em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: left }
-    #tinytable_r7c77gvc48ycvqoxl7uf td.tinytable_css_ge59esh55uciiqzsbk4d, #tinytable_r7c77gvc48ycvqoxl7uf th.tinytable_css_ge59esh55uciiqzsbk4d { text-align: left }
-    #tinytable_r7c77gvc48ycvqoxl7uf td.tinytable_css_sdzwhgrmkabpk896t56v, #tinytable_r7c77gvc48ycvqoxl7uf th.tinytable_css_sdzwhgrmkabpk896t56v {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 1; --line-color-bottom: var(--tt-line-color); --line-color-left: var(--tt-line-color); --line-color-right: var(--tt-line-color); --line-color-top: var(--tt-line-color); --line-width-bottom: 0.05em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.08em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%; ; text-align: left }
-    </style>
-    <div class="container">
-      <table class="tinytable" id="tinytable_r7c77gvc48ycvqoxl7uf" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing='true'>
-        <caption>Tabla de Regresión: Impacto de Choques Térmicos sobre Saber 11 y Mecanismos de Moderación</caption>
-        <thead>
-              <tr>
-                <th scope="col" data-row="0" data-col="1"> </th>
-                <th scope="col" data-row="0" data-col="2">OLS Baseline</th>
-                <th scope="col" data-row="0" data-col="3">TWFE Basal</th>
-                <th scope="col" data-row="0" data-col="4">Principal (Infra)</th>
-                <th scope="col" data-row="0" data-col="5">Panel Balanceado</th>
-                <th scope="col" data-row="0" data-col="6">Sector Público</th>
-                <th scope="col" data-row="0" data-col="7">Sector Privado</th>
-                <th scope="col" data-row="0" data-col="8">Placebo (Lead t+1)</th>
-              </tr>
-        </thead>
-        <tfoot><tr><td colspan='8'>* p &lt; 0.1, ** p &lt; 0.05, *** p &lt; 0.01</td></tr></tfoot>
-        <tbody>
-                <tr>
-                  <td data-row="1" data-col="1">Temp. Efectiva (°C)</td>
-                  <td data-row="1" data-col="2">-1.195*</td>
-                  <td data-row="1" data-col="3">-3.172***</td>
-                  <td data-row="1" data-col="4">-7.637</td>
-                  <td data-row="1" data-col="5">-2.467**</td>
-                  <td data-row="1" data-col="6">-1.671</td>
-                  <td data-row="1" data-col="7">-3.948*</td>
-                  <td data-row="1" data-col="8">-1.010</td>
-                </tr>
-                <tr>
-                  <td data-row="2" data-col="1"></td>
-                  <td data-row="2" data-col="2">(0.687)</td>
-                  <td data-row="2" data-col="3">(1.175)</td>
-                  <td data-row="2" data-col="4">(6.360)</td>
-                  <td data-row="2" data-col="5">(1.212)</td>
-                  <td data-row="2" data-col="6">(1.924)</td>
-                  <td data-row="2" data-col="7">(2.027)</td>
-                  <td data-row="2" data-col="8">(1.046)</td>
-                </tr>
-                <tr>
-                  <td data-row="3" data-col="1">Precip. Efectiva (mm)</td>
-                  <td data-row="3" data-col="2">0.060</td>
-                  <td data-row="3" data-col="3">0.019</td>
-                  <td data-row="3" data-col="4">0.016</td>
-                  <td data-row="3" data-col="5">0.001</td>
-                  <td data-row="3" data-col="6">-0.032</td>
-                  <td data-row="3" data-col="7">0.102*</td>
-                  <td data-row="3" data-col="8">0.023</td>
-                </tr>
-                <tr>
-                  <td data-row="4" data-col="1"></td>
-                  <td data-row="4" data-col="2">(0.048)</td>
-                  <td data-row="4" data-col="3">(0.030)</td>
-                  <td data-row="4" data-col="4">(0.030)</td>
-                  <td data-row="4" data-col="5">(0.030)</td>
-                  <td data-row="4" data-col="6">(0.022)</td>
-                  <td data-row="4" data-col="7">(0.052)</td>
-                  <td data-row="4" data-col="8">(0.032)</td>
-                </tr>
-                <tr>
-                  <td data-row="5" data-col="1">% Estrato Vivienda Bajo</td>
-                  <td data-row="5" data-col="2">-46.641***</td>
-                  <td data-row="5" data-col="3">-0.934</td>
-                  <td data-row="5" data-col="4">-0.482</td>
-                  <td data-row="5" data-col="5">0.354</td>
-                  <td data-row="5" data-col="6">-1.205</td>
-                  <td data-row="5" data-col="7">-0.461</td>
-                  <td data-row="5" data-col="8">-1.044</td>
-                </tr>
-                <tr>
-                  <td data-row="6" data-col="1"></td>
-                  <td data-row="6" data-col="2">(5.790)</td>
-                  <td data-row="6" data-col="3">(2.354)</td>
-                  <td data-row="6" data-col="4">(2.200)</td>
-                  <td data-row="6" data-col="5">(2.174)</td>
-                  <td data-row="6" data-col="6">(3.681)</td>
-                  <td data-row="6" data-col="7">(2.442)</td>
-                  <td data-row="6" data-col="8">(2.155)</td>
-                </tr>
-                <tr>
-                  <td data-row="7" data-col="1">% Conexión Internet</td>
-                  <td data-row="7" data-col="2">25.206***</td>
-                  <td data-row="7" data-col="3">4.598**</td>
-                  <td data-row="7" data-col="4">5.344***</td>
-                  <td data-row="7" data-col="5">5.524***</td>
-                  <td data-row="7" data-col="6">5.632**</td>
-                  <td data-row="7" data-col="7">4.075*</td>
-                  <td data-row="7" data-col="8">5.865***</td>
-                </tr>
-                <tr>
-                  <td data-row="8" data-col="1"></td>
-                  <td data-row="8" data-col="2">(3.950)</td>
-                  <td data-row="8" data-col="3">(1.808)</td>
-                  <td data-row="8" data-col="4">(1.694)</td>
-                  <td data-row="8" data-col="5">(1.644)</td>
-                  <td data-row="8" data-col="6">(2.619)</td>
-                  <td data-row="8" data-col="7">(2.358)</td>
-                  <td data-row="8" data-col="8">(1.846)</td>
-                </tr>
-                <tr>
-                  <td data-row="9" data-col="1">Índice de Hacinamiento Hogar</td>
-                  <td data-row="9" data-col="2">2.593</td>
-                  <td data-row="9" data-col="3">2.404</td>
-                  <td data-row="9" data-col="4">2.424</td>
-                  <td data-row="9" data-col="5"></td>
-                  <td data-row="9" data-col="6"></td>
-                  <td data-row="9" data-col="7"></td>
-                  <td data-row="9" data-col="8"></td>
-                </tr>
-                <tr>
-                  <td data-row="10" data-col="1"></td>
-                  <td data-row="10" data-col="2">(2.616)</td>
-                  <td data-row="10" data-col="3">(1.774)</td>
-                  <td data-row="10" data-col="4">(1.701)</td>
-                  <td data-row="10" data-col="5"></td>
-                  <td data-row="10" data-col="6"></td>
-                  <td data-row="10" data-col="7"></td>
-                  <td data-row="10" data-col="8"></td>
-                </tr>
-                <tr>
-                  <td data-row="11" data-col="1">Temp. × Red Energía Eléctrica</td>
-                  <td data-row="11" data-col="2"></td>
-                  <td data-row="11" data-col="3"></td>
-                  <td data-row="11" data-col="4">4.848</td>
-                  <td data-row="11" data-col="5"></td>
-                  <td data-row="11" data-col="6"></td>
-                  <td data-row="11" data-col="7"></td>
-                  <td data-row="11" data-col="8"></td>
-                </tr>
-                <tr>
-                  <td data-row="12" data-col="1"></td>
-                  <td data-row="12" data-col="2"></td>
-                  <td data-row="12" data-col="3"></td>
-                  <td data-row="12" data-col="4">(6.085)</td>
-                  <td data-row="12" data-col="5"></td>
-                  <td data-row="12" data-col="6"></td>
-                  <td data-row="12" data-col="7"></td>
-                  <td data-row="12" data-col="8"></td>
-                </tr>
-                <tr>
-                  <td data-row="13" data-col="1">Placebo: Temp. Efectiva (t+1)</td>
-                  <td data-row="13" data-col="2"></td>
-                  <td data-row="13" data-col="3"></td>
-                  <td data-row="13" data-col="4"></td>
-                  <td data-row="13" data-col="5"></td>
-                  <td data-row="13" data-col="6"></td>
-                  <td data-row="13" data-col="7"></td>
-                  <td data-row="13" data-col="8">-1.567</td>
-                </tr>
-                <tr>
-                  <td data-row="14" data-col="1"></td>
-                  <td data-row="14" data-col="2"></td>
-                  <td data-row="14" data-col="3"></td>
-                  <td data-row="14" data-col="4"></td>
-                  <td data-row="14" data-col="5"></td>
-                  <td data-row="14" data-col="6"></td>
-                  <td data-row="14" data-col="7"></td>
-                  <td data-row="14" data-col="8">(1.967)</td>
-                </tr>
-                <tr>
-                  <td data-row="15" data-col="1">Observaciones</td>
-                  <td data-row="15" data-col="2">4123</td>
-                  <td data-row="15" data-col="3">4085</td>
-                  <td data-row="15" data-col="4">3918</td>
-                  <td data-row="15" data-col="5">3468</td>
-                  <td data-row="15" data-col="6">1868</td>
-                  <td data-row="15" data-col="7">2218</td>
-                  <td data-row="15" data-col="8">3196</td>
-                </tr>
-                <tr>
-                  <td data-row="16" data-col="1">R²</td>
-                  <td data-row="16" data-col="2">0.467</td>
-                  <td data-row="16" data-col="3">0.926</td>
-                  <td data-row="16" data-col="4">0.926</td>
-                  <td data-row="16" data-col="5">0.916</td>
-                  <td data-row="16" data-col="6">0.824</td>
-                  <td data-row="16" data-col="7">0.930</td>
-                  <td data-row="16" data-col="8">0.929</td>
-                </tr>
-                <tr>
-                  <td data-row="17" data-col="1">R² Ajustado</td>
-                  <td data-row="17" data-col="2">0.467</td>
-                  <td data-row="17" data-col="3">0.907</td>
-                  <td data-row="17" data-col="4">0.908</td>
-                  <td data-row="17" data-col="5">0.897</td>
-                  <td data-row="17" data-col="6">0.780</td>
-                  <td data-row="17" data-col="7">0.912</td>
-                  <td data-row="17" data-col="8">0.907</td>
-                </tr>
-        </tbody>
-      </table>
-    </div>
-    <!-- postamble start -->
-  </body>
-
-</html>
-<!-- postamble end -->
-<!-- hack to avoid NA insertion in last line -->
+<table class='table table-striped table-hover' style='font-family: Arial, sans-serif; border-collapse: collapse; width: 100%; border: 1px solid #ddd;'>
+<caption>Tabla de Regresión: Impacto de Choques Térmicos sobre Saber 11 y Mecanismos de Moderación</caption>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Variable </th>
+   <th style="text-align:center;"> Metrica </th>
+   <th style="text-align:center;"> OLS Baseline </th>
+   <th style="text-align:center;"> TWFE Basal </th>
+   <th style="text-align:center;"> Principal (Infra) </th>
+   <th style="text-align:center;"> Panel Balanceado </th>
+   <th style="text-align:center;"> Sector Público </th>
+   <th style="text-align:center;"> Sector Privado </th>
+   <th style="text-align:center;"> Placebo (Lead t+1) </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> Temp. Efectiva (°C) </td>
+   <td style="text-align:center;"> estimate </td>
+   <td style="text-align:center;"> -1.195* </td>
+   <td style="text-align:center;"> -3.172*** </td>
+   <td style="text-align:center;"> -7.637 </td>
+   <td style="text-align:center;"> -2.467** </td>
+   <td style="text-align:center;"> -1.671 </td>
+   <td style="text-align:center;"> -3.948* </td>
+   <td style="text-align:center;"> -1.010 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Temp. Efectiva (°C) </td>
+   <td style="text-align:center;"> std.error </td>
+   <td style="text-align:center;"> (0.687) </td>
+   <td style="text-align:center;"> (1.175) </td>
+   <td style="text-align:center;"> (6.360) </td>
+   <td style="text-align:center;"> (1.212) </td>
+   <td style="text-align:center;"> (1.924) </td>
+   <td style="text-align:center;"> (2.027) </td>
+   <td style="text-align:center;"> (1.046) </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Precip. Efectiva (mm) </td>
+   <td style="text-align:center;"> estimate </td>
+   <td style="text-align:center;"> 0.060 </td>
+   <td style="text-align:center;"> 0.019 </td>
+   <td style="text-align:center;"> 0.016 </td>
+   <td style="text-align:center;"> 0.001 </td>
+   <td style="text-align:center;"> -0.032 </td>
+   <td style="text-align:center;"> 0.102* </td>
+   <td style="text-align:center;"> 0.023 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Precip. Efectiva (mm) </td>
+   <td style="text-align:center;"> std.error </td>
+   <td style="text-align:center;"> (0.048) </td>
+   <td style="text-align:center;"> (0.030) </td>
+   <td style="text-align:center;"> (0.030) </td>
+   <td style="text-align:center;"> (0.030) </td>
+   <td style="text-align:center;"> (0.022) </td>
+   <td style="text-align:center;"> (0.052) </td>
+   <td style="text-align:center;"> (0.032) </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> % Estrato Vivienda Bajo </td>
+   <td style="text-align:center;"> estimate </td>
+   <td style="text-align:center;"> -46.641*** </td>
+   <td style="text-align:center;"> -0.934 </td>
+   <td style="text-align:center;"> -0.482 </td>
+   <td style="text-align:center;"> 0.354 </td>
+   <td style="text-align:center;"> -1.205 </td>
+   <td style="text-align:center;"> -0.461 </td>
+   <td style="text-align:center;"> -1.044 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> % Estrato Vivienda Bajo </td>
+   <td style="text-align:center;"> std.error </td>
+   <td style="text-align:center;"> (5.790) </td>
+   <td style="text-align:center;"> (2.354) </td>
+   <td style="text-align:center;"> (2.200) </td>
+   <td style="text-align:center;"> (2.174) </td>
+   <td style="text-align:center;"> (3.681) </td>
+   <td style="text-align:center;"> (2.442) </td>
+   <td style="text-align:center;"> (2.155) </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> % Conexión Internet </td>
+   <td style="text-align:center;"> estimate </td>
+   <td style="text-align:center;"> 25.206*** </td>
+   <td style="text-align:center;"> 4.598** </td>
+   <td style="text-align:center;"> 5.344*** </td>
+   <td style="text-align:center;"> 5.524*** </td>
+   <td style="text-align:center;"> 5.632** </td>
+   <td style="text-align:center;"> 4.075* </td>
+   <td style="text-align:center;"> 5.865*** </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> % Conexión Internet </td>
+   <td style="text-align:center;"> std.error </td>
+   <td style="text-align:center;"> (3.950) </td>
+   <td style="text-align:center;"> (1.808) </td>
+   <td style="text-align:center;"> (1.694) </td>
+   <td style="text-align:center;"> (1.644) </td>
+   <td style="text-align:center;"> (2.619) </td>
+   <td style="text-align:center;"> (2.358) </td>
+   <td style="text-align:center;"> (1.846) </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Índice de Hacinamiento Hogar </td>
+   <td style="text-align:center;"> estimate </td>
+   <td style="text-align:center;"> 2.593 </td>
+   <td style="text-align:center;"> 2.404 </td>
+   <td style="text-align:center;"> 2.424 </td>
+   <td style="text-align:center;">  </td>
+   <td style="text-align:center;">  </td>
+   <td style="text-align:center;">  </td>
+   <td style="text-align:center;">  </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Índice de Hacinamiento Hogar </td>
+   <td style="text-align:center;"> std.error </td>
+   <td style="text-align:center;"> (2.616) </td>
+   <td style="text-align:center;"> (1.774) </td>
+   <td style="text-align:center;"> (1.701) </td>
+   <td style="text-align:center;">  </td>
+   <td style="text-align:center;">  </td>
+   <td style="text-align:center;">  </td>
+   <td style="text-align:center;">  </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Temp. × Red Energía Eléctrica </td>
+   <td style="text-align:center;"> estimate </td>
+   <td style="text-align:center;">  </td>
+   <td style="text-align:center;">  </td>
+   <td style="text-align:center;"> 4.848 </td>
+   <td style="text-align:center;">  </td>
+   <td style="text-align:center;">  </td>
+   <td style="text-align:center;">  </td>
+   <td style="text-align:center;">  </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Temp. × Red Energía Eléctrica </td>
+   <td style="text-align:center;"> std.error </td>
+   <td style="text-align:center;">  </td>
+   <td style="text-align:center;">  </td>
+   <td style="text-align:center;"> (6.085) </td>
+   <td style="text-align:center;">  </td>
+   <td style="text-align:center;">  </td>
+   <td style="text-align:center;">  </td>
+   <td style="text-align:center;">  </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Placebo: Temp. Efectiva (t+1) </td>
+   <td style="text-align:center;"> estimate </td>
+   <td style="text-align:center;">  </td>
+   <td style="text-align:center;">  </td>
+   <td style="text-align:center;">  </td>
+   <td style="text-align:center;">  </td>
+   <td style="text-align:center;">  </td>
+   <td style="text-align:center;">  </td>
+   <td style="text-align:center;"> -1.567 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Placebo: Temp. Efectiva (t+1) </td>
+   <td style="text-align:center;"> std.error </td>
+   <td style="text-align:center;">  </td>
+   <td style="text-align:center;">  </td>
+   <td style="text-align:center;">  </td>
+   <td style="text-align:center;">  </td>
+   <td style="text-align:center;">  </td>
+   <td style="text-align:center;">  </td>
+   <td style="text-align:center;"> (1.967) </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Observaciones </td>
+   <td style="text-align:center;">  </td>
+   <td style="text-align:center;"> 4123 </td>
+   <td style="text-align:center;"> 4085 </td>
+   <td style="text-align:center;"> 3918 </td>
+   <td style="text-align:center;"> 3468 </td>
+   <td style="text-align:center;"> 1868 </td>
+   <td style="text-align:center;"> 2218 </td>
+   <td style="text-align:center;"> 3196 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> R² </td>
+   <td style="text-align:center;">  </td>
+   <td style="text-align:center;"> 0.467 </td>
+   <td style="text-align:center;"> 0.926 </td>
+   <td style="text-align:center;"> 0.926 </td>
+   <td style="text-align:center;"> 0.916 </td>
+   <td style="text-align:center;"> 0.824 </td>
+   <td style="text-align:center;"> 0.930 </td>
+   <td style="text-align:center;"> 0.929 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> R² Ajustado </td>
+   <td style="text-align:center;">  </td>
+   <td style="text-align:center;"> 0.467 </td>
+   <td style="text-align:center;"> 0.907 </td>
+   <td style="text-align:center;"> 0.908 </td>
+   <td style="text-align:center;"> 0.897 </td>
+   <td style="text-align:center;"> 0.780 </td>
+   <td style="text-align:center;"> 0.912 </td>
+   <td style="text-align:center;"> 0.907 </td>
+  </tr>
+</tbody>
+</table>

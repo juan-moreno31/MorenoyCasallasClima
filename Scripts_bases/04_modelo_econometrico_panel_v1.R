@@ -178,18 +178,18 @@ cat("Grafico guardado en:", out_fig, "\n")
 
 
 # ==============================================================================
-# ETAPA 4: EXPORTACIÓN DE TABLA ACADÉMICA EN HTML (CON KABLE DE R)
+# ETAPA 4: MOSTRAR TABLA EN CONSOLA (KABLE)
 # ==============================================================================
-cat("\nGenerando tabla resumen académica en formato HTML (con kable de R)...\n")
+cat("\n--- TABLA RESUMEN DE MODELOS ---\n")
 
 all_models <- list(
-  "OLS Baseline"      = m1_ols,
-  "TWFE Basal"        = m2_twfe,
-  "Principal (Infra)" = m3_principal,
-  "Panel Balanceado"  = r1_balanceado,
-  "Sector Público"    = r2_oficiales,
-  "Sector Privado"    = r3_privados,
-  "Placebo (Lead t+1)"= r4_placebo
+  "OLS"          = m1_ols,
+  "TWFE"         = m2_twfe,
+  "Principal"    = m3_principal,
+  "Bal."         = r1_balanceado,
+  "Oficial"      = r2_oficiales,
+  "Privado"      = r3_privados,
+  "Placebo"      = r4_placebo
 )
 
 coef_labels <- c(
@@ -204,15 +204,11 @@ coef_labels <- c(
   "temp_lead1"                          = "Placebo: Temp. Efectiva (t+1)"
 )
 
-# Mapeo personalizado de estadísticos de bondad de ajuste
 gof_custom <- list(
   list("raw" = "nobs", "clean" = "Observaciones", "fmt" = 0),
-  list("raw" = "r.squared", "clean" = "R²", "fmt" = 3),
-  list("raw" = "adj.r.squared", "clean" = "R² Ajustado", "fmt" = 3),
-  list("raw" = "within.r.squared", "clean" = "R² Within", "fmt" = 3)
+  list("raw" = "r.squared", "clean" = "R²", "fmt" = 3)
 )
 
-# Obtener dataframe limpio de modelsummary
 tab_df <- msummary(
   all_models,
   coef_map = coef_labels,
@@ -221,62 +217,10 @@ tab_df <- msummary(
   output = "data.frame"
 )
 
-# Limpiar dataframe para kable
 tab_clean <- tab_df %>%
   select(-part) %>%
   rename(Variable = term, Metrica = statistic)
 
-# Generar la tabla HTML usando kable de knitr
-html_table <- knitr::kable(
-  tab_clean,
-  format = "html",
-  align = c("l", "c", "c", "c", "c", "c", "c", "c", "c"),
-  table.attr = "class='table table-striped table-hover' style='font-family: Arial, sans-serif; border-collapse: collapse; width: 100%; border: 1px solid #ddd;'",
-  caption = "Tabla de Regresión: Impacto de Choques Térmicos sobre Saber 11 y Mecanismos de Moderación"
-)
+print(knitr::kable(tab_clean, format = "simple"))
 
-# Agregar estilos CSS para que se vea hermosa y profesional
-css_styles <- "
-<style>
-  table {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-    margin: 20px 0;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  }
-  th {
-    background-color: #2c3e50;
-    color: white;
-    font-weight: bold;
-    padding: 12px;
-    text-align: center;
-    border: 1px solid #ddd;
-  }
-  td {
-    padding: 10px;
-    border: 1px solid #ddd;
-  }
-  tr:nth-child(even) {
-    background-color: #f8f9fa;
-  }
-  tr:hover {
-    background-color: #f1f3f5;
-  }
-  caption {
-    font-size: 1.3em;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #2c3e50;
-    text-align: left;
-  }
-</style>
-"
-
-final_html <- paste(css_styles, as.character(html_table), sep = "\n")
-
-out_html <- file.path(base_dir, "Bases_Procesadas", "tabla_resumen_modelos.html")
-writeLines(final_html, out_html)
-
-cat("Tabla HTML (vía kable) guardada exitosamente en:", out_html, "\n")
 

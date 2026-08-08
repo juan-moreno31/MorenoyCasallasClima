@@ -1,0 +1,43 @@
+---
+title: "Producción del espacio educativo en Cundinamarca: un análisis de las condiciones climáticas, la infraestructura y sus efectos en la desigualdad académica"
+shorttitle: "Educación, clima e infraestructura en Cundinamarca"
+
+author:
+  - name: Wendy Karina Casallas Lancheros
+    corresponding: true
+    email: wendy.casallas@est.uexternado.edu.co
+    affiliations:
+      - id: u_externado
+        name: Universidad Externado de Colombia
+        department: Facultad de Ciencias Sociales y Humanas
+    roles: [writing, formal analysis, conceptualization]
+
+  - name: Juan Diego Moreno Sánchez
+    email: juan.moreno31@est.uexternado.edu.co
+    affiliations:
+      - id: u_externado
+        name: Universidad Externado de Colombia
+        department: Facultad de Economía
+    roles: [supervision, methodology, conceptualization]
+
+author-note:
+disclosures:
+  conflict-of-interest: "Los autores declaran que no tienen conflictos de intereses."
+
+abstract: |
+  Este estudio examina el impacto causal de los choques térmicos y pluviométricos sobre el rendimiento académico en la prueba censal Saber 11 para las instituciones educativas del departamento de Cundinamarca, Colombia (2014-2019). Mediante la combinación de microdatos educativos a nivel de colegio con datos climáticos satelitales ERA5-Land y un modelo econométrico de Efectos Fijos de Dos Vías (TWFE), se identifica que un incremento de 1°C en la temperatura efectiva reduce el puntaje global en -2.79 puntos (p < 0.01). Asimismo, se evidencia que la disponibilidad de infraestructura física y tecnológica actúa como un mecanismo moderador clave contra el estrés térmico.
+
+keywords:
+  - Cambio climático
+  - Rendimiento académico
+  - Saber 11
+  - Infraestructura escolar
+  - Cundinamarca
+  - Efectos fijos panel
+
+format:
+  wjschne/apaquarto-docx: default
+
+bibliography: referencias.bib
+lang: es
+---
